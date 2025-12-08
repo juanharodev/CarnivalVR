@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Anchor
   - Ground
+  - Fish
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Bow
+  - Arrow
   - 
   - 
   - 
