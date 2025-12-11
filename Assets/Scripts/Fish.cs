@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -63,7 +64,7 @@ public class Fish : MonoBehaviour
     IEnumerator StopFish()
     {
         isStoped = true;
-        float waitTime = Random.Range(minStopTime,maxStopTime);
+        float waitTime = UnityEngine.Random.Range(minStopTime,maxStopTime);
         yield return new WaitForSeconds(Mathf.Abs(waitTime));
         SetDestination();
         isStoped = false;
@@ -75,7 +76,7 @@ public class Fish : MonoBehaviour
         bool found = false;
         while (!found)
         {
-            Vector3 destination = centerPoint.position + (Random.insideUnitSphere * searchRadius);
+            Vector3 destination = centerPoint.position + (UnityEngine.Random.insideUnitSphere * searchRadius);
             if(NavMesh.SamplePosition(destination,out NavMeshHit hit, searchRadius, NavMesh.AllAreas)){
                 agent.SetDestination(hit.position);
                 modelDestination = hit.position;
@@ -85,10 +86,14 @@ public class Fish : MonoBehaviour
         }
     }
 
+[SerializeField] float treshold = 1;
     void MoveModel()
     {
-        viewDirection = modelDestination - model.transform.position; 
-        model.forward = viewDirection == Vector3.zero? model.forward : viewDirection;
+        Vector3 relativePos = modelDestination - model.transform.position;
+        if(relativePos.magnitude < treshold){relativePos = Vector3.Lerp(transform.forward,relativePos,Time.deltaTime);}
+        Debug.Log(relativePos);
+        Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
+        model.rotation = rotation;
         Vector3 nextPosition = model.position;
         nextPosition.y = Mathf.Lerp(nextPosition.y,modelDestination.y,t * Time.deltaTime);
         model.position = nextPosition;
@@ -97,9 +102,7 @@ public class Fish : MonoBehaviour
 
     float RandomYMoveRange()
     {
-        float min = transform.position.y + offset.y;
-        return Random.Range(min,min + size.y); 
+        float min = transform.position.y;
+        return UnityEngine.Random.Range(min,min + size.y); 
     }
-
-
 }

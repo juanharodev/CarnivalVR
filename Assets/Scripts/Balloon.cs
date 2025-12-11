@@ -11,6 +11,8 @@ public class Balloon : MonoBehaviour
     [SerializeField] float maxSpeed;
     [SerializeField] SoundPlayer soundPlayer;
     [SerializeField] GameObject model;
+    [SerializeField] ColorRandomizer colorRandomizer;
+    public GameObject Model => model;
     Coroutine movement;
     
      float speed;
@@ -28,6 +30,7 @@ public class Balloon : MonoBehaviour
 
     public void Initialize()
     {
+        colorRandomizer.ChangeColor();
         transform.position = initialPosition;
         model.SetActive(true);
         speed = Random.Range(minSpeed,maxSpeed);
@@ -59,7 +62,7 @@ public class Balloon : MonoBehaviour
     void Pop()
     {
         soundPlayer.PlaySound();
-        StopCoroutine(movement);
+        if(movement != null){StopCoroutine(movement);}
         model.SetActive(false);
     }
 

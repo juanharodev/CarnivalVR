@@ -13,8 +13,9 @@ public class BallonGame : MonoBehaviour
     {
         foreach(Balloon b in balloons)
         {
-            b.gameObject.SetActive(false);
+            b.Model.SetActive(false);
         }
+        bow.gameObject.SetActive(false);
     }
     public void Initialize()
     {
@@ -25,6 +26,14 @@ public class BallonGame : MonoBehaviour
         foreach(Balloon b in balloons)
         {
             b.Initialize();
+        }
+    }
+
+    void Update()
+    {
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            Initialize();
         }
     }
 }
