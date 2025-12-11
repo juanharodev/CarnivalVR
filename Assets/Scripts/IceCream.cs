@@ -44,6 +44,10 @@ namespace BehaviourTrees
             {
                 gameObject.transform.position = new Vector3(Mathf.Lerp(gameObject.transform.position.x, positions[currentPositionIndex].position.x, 1), Mathf.Lerp(gameObject.transform.position.y, positions[currentPositionIndex].position.y, 1), 0);
             }
+            else
+            {
+                grababble= true;
+            }
         }
 
         bool CheckDistance()
@@ -55,11 +59,12 @@ namespace BehaviourTrees
             }
             foreach (var item in playerHands)
             {
-                if (Vector3.Distance(cone.transform.position, item.position) < distanceTrigger)
+                if (Vector3.Distance(cone.transform.position, item.position) < distanceTrigger && grababble)
                 {
                     
                     
                         //move icecream
+                        grababble =false;
                         return true;
                     
                 }
