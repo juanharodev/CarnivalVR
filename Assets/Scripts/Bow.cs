@@ -26,13 +26,7 @@ public class Bow : MonoBehaviour
     {
         UpdateLine();
         if (isUpdatingArrow){ UpdateArrow(); }
-        if (Mouse.current.rightButton.wasPressedThisFrame)
-        {
-            isUpdatingArrow = true;
-            arrow.SetActive(true);
-            grabCount = 2;
-            Shoot();
-        }
+        
     }
 
     public void StartShoot(SelectEnterEventArgs args)

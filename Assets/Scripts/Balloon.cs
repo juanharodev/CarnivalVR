@@ -12,6 +12,7 @@ public class Balloon : MonoBehaviour
     [SerializeField] SoundPlayer soundPlayer;
     [SerializeField] GameObject model;
     [SerializeField] ColorRandomizer colorRandomizer;
+    [SerializeField] Collider balloonCollider;
     public GameObject Model => model;
     Coroutine movement;
     
@@ -33,6 +34,7 @@ public class Balloon : MonoBehaviour
         colorRandomizer.ChangeColor();
         transform.position = initialPosition;
         model.SetActive(true);
+        balloonCollider.enabled = true;
         speed = Random.Range(minSpeed,maxSpeed);
         movementRange = Random.Range(minMovementRange,maxMovementRange);
 
@@ -64,6 +66,7 @@ public class Balloon : MonoBehaviour
         soundPlayer.PlaySound();
         if(movement != null){StopCoroutine(movement);}
         model.SetActive(false);
+        balloonCollider.enabled = false;
     }
 
     void OnTriggerEnter(Collider other)
