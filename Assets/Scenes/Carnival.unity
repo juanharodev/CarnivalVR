@@ -5012,6 +5012,10 @@ PrefabInstance:
       propertyPath: baseSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 3049050940099364803, guid: e7851e95458074743a5a2a118db500eb, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 4823383714752301877, guid: e086c9ca8fd3ec046a1477c2f43cb09b, type: 3}
     - target: {fileID: 3933732077363101613, guid: e7851e95458074743a5a2a118db500eb, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -5076,7 +5080,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8774313549599989154, guid: e7851e95458074743a5a2a118db500eb, type: 3}
+    - {fileID: 2288308593682574601, guid: e7851e95458074743a5a2a118db500eb, type: 3}
+    - {fileID: 4712033521480191212, guid: e7851e95458074743a5a2a118db500eb, type: 3}
+    - {fileID: 219012092090420537, guid: e7851e95458074743a5a2a118db500eb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

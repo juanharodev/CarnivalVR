@@ -10,6 +10,7 @@ public class Bow : MonoBehaviour
 
     [Header("Arrow")]
     [SerializeField] GameObject arrow;
+    [SerializeField] GameObject arrowPrefab;
     [SerializeField] float baseSpeed;
     public bool isUpdatingArrow;
     
@@ -47,7 +48,7 @@ public class Bow : MonoBehaviour
         grabCount--;
         if (grabCount != 1) return;
         Vector3 direction = bowGrabPoint.position - bowstringMiddle.position;
-        GameObject instance = Instantiate(arrow,bowstringGrabPoint.position, Quaternion.identity);
+        GameObject instance = Instantiate(arrowPrefab,bowstringGrabPoint.position, Quaternion.identity);
         instance.transform.up = bowGrabPoint.forward;
         Rigidbody arrowRb =  instance.GetComponent<Rigidbody>();
         arrowRb.AddForce(direction * baseSpeed,ForceMode.Impulse);
