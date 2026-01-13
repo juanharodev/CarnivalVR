@@ -1,0 +1,62 @@
+using System.Collections;
+using TMPro;
+using UnityEngine;
+
+public class Basketball : MonoBehaviour
+{
+    int score = 0;
+    int highScore;
+    bool isGamePlaying;
+    [SerializeField,Tooltip("Max game time in seconds")]
+    int  maxTime;
+    [SerializeField] TextMeshPro timer;
+    [SerializeField] TextMeshPro lblHighScore;
+    [SerializeField] TextMeshPro lblCurrentScore;
+    static string HIGH_SCORE_KEY = "highScore";
+
+    void Awake()
+    {
+        highScore = PlayerPrefs.GetInt(HIGH_SCORE_KEY,0);
+        score = 0;
+        StartGame();
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(!isGamePlaying){return;}
+        if (other.CompareTag("Basketball"))
+        {
+            score++;
+            lblCurrentScore.text = score.ToString("D2");
+        }
+    }
+
+    public void StartGame()
+    {
+        if(isGamePlaying){return;}
+        score = 0;
+        isGamePlaying = true;
+        StartCoroutine(Timer());
+    }
+
+    void EndGame()
+    {
+        isGamePlaying = false;
+        if(highScore < score)
+        {
+            highScore = score;
+            PlayerPrefs.SetInt(HIGH_SCORE_KEY,highScore);
+            lblHighScore.text = highScore.ToString("D2");
+        }
+    }
+    
+    IEnumerator Timer()
+    {
+        for(int i = maxTime; 0<i; i--)
+        {
+            yield return new WaitForSeconds(1);
+            timer.text = i.ToString("D2");
+        }
+        EndGame();
+    }
+}

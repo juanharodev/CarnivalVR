@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Fish
   - Arrow
+  - Basketball
   layers:
   - Default
   - TransparentFX
