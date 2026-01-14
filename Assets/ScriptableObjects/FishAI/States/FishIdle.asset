@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb4db3834ad4774ab32d30788aef700, type: 3}
+  m_Name: FishIdle
+  m_EditorClassIdentifier: 
+  transitions:
+  - condition: {fileID: 11400000, guid: abf95eb900973e740bd31f69f5629f0b, type: 2}
+    state: {fileID: 11400000, guid: c09145758e06889458e4a95bf9f8b3fe, type: 2}
+  - condition: {fileID: 11400000, guid: 235bf566b8aecae4e904b1be7c497960, type: 2}
+    state: {fileID: 11400000, guid: 3079f754b6c851b44a3aa1ce5bb2c9c2, type: 2}
+  - condition: {fileID: 11400000, guid: aec6085eacfb3594988f0481f25cf0e1, type: 2}
+    state: {fileID: 11400000, guid: d8acbf60892c88a4ebdfa47947234219, type: 2}
