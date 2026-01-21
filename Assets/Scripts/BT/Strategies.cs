@@ -14,7 +14,7 @@ namespace BehaviourTrees
         {
             //nada
         }
-}
+    }
 
     public class Condition : IStrategy
     {
@@ -88,6 +88,39 @@ namespace BehaviourTrees
         public void Reset()=>currentIndex = 0;
 
 
+    }
+
+    public class MoveToTransform : IStrategy
+    {
+        Transform entity;
+        System.Func<Transform> targetProvider;
+        float speed;
+
+        public MoveToTransform(
+            Transform entity,
+            System.Func<Transform> targetProvider,
+            float speed
+        )
+        {
+            this.entity = entity;
+            this.targetProvider = targetProvider;
+            this.speed = speed;
+        }
+
+        public Node.status Process()
+        {
+            Transform target = targetProvider();
+
+            entity.position = Vector3.MoveTowards(
+                entity.position,
+                target.position,
+                speed * Time.deltaTime
+            );
+
+            return Vector3.Distance(entity.position, target.position) < 0.05f
+                ? Node.status.Success
+                : Node.status.Running;
+        }
     }
 
     public class ReturnHome : IStrategy
