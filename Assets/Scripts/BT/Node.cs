@@ -36,16 +36,20 @@ namespace BehaviourTrees
                 switch (children[currentChild].Process())
                 {
                     case status.Running:
-                        Reset();
                         return status.Running;
+
                     case status.Failure:
                         Reset();
                         return status.Failure;
+
                     case status.Success:
                         currentChild++;
-                        return currentChild == children.Count ? status.Success : status.Running;
+                        return currentChild == children.Count
+                            ? status.Success
+                            : status.Running;
                 }
             }
+
             Reset();
             return status.Success;
         }

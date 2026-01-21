@@ -121,7 +121,7 @@ namespace BehaviourTrees
         void PullBack()
         {
             pity--;
-            cone.transform.Rotate(180f, 0f, 0f);
+            transform.Rotate(180f, 0f, 0f);
         }
 
         void ChooseNewPosition()
