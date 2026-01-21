@@ -1589,9 +1589,9 @@ NavMeshAgent:
   m_AgentTypeID: -334000983
   m_Radius: 0.5
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 1
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 30
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -1612,9 +1612,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 306468b3494cc5d45b1cdefb48756044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSpeed: 1
-  fleeSpeed: 2
-  fearSpeed: 3
+  idleSpeed: 0.2
+  fleeSpeed: 0.5
+  fearSpeed: 0.75
   fishNet: {fileID: 1343546234}
   fishAgent: {fileID: 1470282192}
   fsm: {fileID: 1470282189}
@@ -1643,10 +1643,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a99a063c5a4d946bed752a1ebec25f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  model: {fileID: 64147284}
-  t: 1
+  model: {fileID: 1726053573}
+  t: 0.6
   tankBounds: {fileID: 1408081569}
-  modelTreshold: 1
+  modelTreshold: 0.1
 --- !u!1 &1670966177
 GameObject:
   m_ObjectHideFlags: 0

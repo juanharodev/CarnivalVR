@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(NavMeshAgent)),DefaultExecutionOrder(-1)]
 public class FishAgent : MonoBehaviour
 {
     [Header("Navigation")]
@@ -50,7 +50,6 @@ public class FishAgent : MonoBehaviour
     {
         Vector3 relativePos = modelDestination - model.transform.position;
         if(relativePos.magnitude < modelTreshold){relativePos = Vector3.Lerp(transform.forward,relativePos,Time.deltaTime);}
-        Debug.Log(relativePos);
         Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
         model.rotation = rotation;
         Vector3 nextPosition = model.position;
