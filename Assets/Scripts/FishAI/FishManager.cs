@@ -30,12 +30,4 @@ public class FishManager : MonoBehaviour
         net.transform.rotation = netStartPosition.rotation;
         net.gameObject.SetActive(true);
     }
-
-    void Update()
-    {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            StartGame();
-        }
-    }
 }

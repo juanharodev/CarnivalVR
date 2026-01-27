@@ -28,12 +28,4 @@ public class BallonGame : MonoBehaviour
             b.Initialize();
         }
     }
-
-    void Update()
-    {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            Initialize();
-        }
-    }
 }

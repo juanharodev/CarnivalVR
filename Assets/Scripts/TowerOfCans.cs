@@ -31,15 +31,7 @@ public class TowerOfCans : MonoBehaviour
             ballsinstances.Add(ball.GetComponent<Rigidbody>());
         }
     }
-
-    void Update()
-    {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            RestartGame();
-        }
-    }
-
+    
     public void RestartGame()
     {
         Quaternion rotation = canPrefab.transform.rotation;
