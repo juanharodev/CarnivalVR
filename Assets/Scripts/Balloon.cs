@@ -16,7 +16,7 @@ public class Balloon : MonoBehaviour
     public GameObject Model => model;
     Coroutine movement;
     
-     float speed;
+    float speed;
 
     Vector3 initialPosition;
     float yMovement;
@@ -31,6 +31,7 @@ public class Balloon : MonoBehaviour
 
     public void Initialize()
     {
+        if(movement != null){StopCoroutine(movement);}
         colorRandomizer.ChangeColor();
         transform.position = initialPosition;
         model.SetActive(true);
