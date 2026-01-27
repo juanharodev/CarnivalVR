@@ -18,9 +18,9 @@ public class FishNet : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Fish"))
+        if (other.TryGetComponent<FishCollition>(out FishCollition fish))
         {
-            other.gameObject.SetActive(false);
+            fish.Collide();
         }
     }
 }

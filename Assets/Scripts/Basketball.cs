@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -14,11 +15,14 @@ public class Basketball : MonoBehaviour
     [SerializeField] TextMeshPro lblCurrentScore;
     static string HIGH_SCORE_KEY = "highScore";
 
+    public List<Transform> BallStartPoints;
+    public List<Rigidbody> Balls;
+
     void Awake()
     {
         highScore = PlayerPrefs.GetInt(HIGH_SCORE_KEY,0);
         score = 0;
-        StartGame();
+        EndGame();
     }
 
     void OnTriggerEnter(Collider other)
@@ -34,6 +38,7 @@ public class Basketball : MonoBehaviour
     public void StartGame()
     {
         if(isGamePlaying){return;}
+        UpdateBalls(true);
         score = 0;
         isGamePlaying = true;
         StartCoroutine(Timer());
@@ -41,6 +46,7 @@ public class Basketball : MonoBehaviour
 
     void EndGame()
     {
+        UpdateBalls(false);
         isGamePlaying = false;
         if(highScore < score)
         {
@@ -58,5 +64,18 @@ public class Basketball : MonoBehaviour
             timer.text = i.ToString("D2");
         }
         EndGame();
+    }
+
+    void UpdateBalls(bool state)
+    {
+        for(int i = 0; i<Balls.Count; i++)
+        {
+            Balls[i].gameObject.SetActive(false);
+            Balls[i].useGravity = state;
+            Balls[i].linearVelocity = Vector3.zero;
+            Balls[i].angularVelocity = Vector3.zero;
+            Balls[i].transform.position = BallStartPoints[i].position;
+            Balls[i].gameObject.SetActive(state);
+        }
     }
 }

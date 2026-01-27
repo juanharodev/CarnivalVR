@@ -15,7 +15,7 @@ public class FishAgent : MonoBehaviour
 
     [SerializeField] TankBounds tankBounds;
 
-    void Start()
+    void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
     }

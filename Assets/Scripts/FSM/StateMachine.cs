@@ -3,11 +3,13 @@ using UnityEngine.AI;
 
 namespace FSM
 {
-    [RequireComponent(typeof(NavMeshAgent))]
+    [RequireComponent(typeof(NavMeshAgent)),DefaultExecutionOrder(-2)]
     public class StateMachine : MonoBehaviour{
     public State CurrentState { get; private set; }
     [SerializeField] State initialState;
-    public UnityEngine.AI.NavMeshAgent Agent{get; private set;}
+    public State InitialState{get => initialState;}
+    [SerializeField] UnityEngine.AI.NavMeshAgent agent;
+    public UnityEngine.AI.NavMeshAgent Agent{get => agent; private set =>  agent = value;}
 
     public BlackBoard blackBoard;
 
@@ -17,7 +19,7 @@ namespace FSM
         if(Agent == null){Agent = GetComponent<NavMeshAgent>();}
     }
 
-    void Start()
+    void OnEnable()
     {
         ChangeState(initialState);
     }

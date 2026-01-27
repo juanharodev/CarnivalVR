@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "CarnivalVR.sln"
+    "dotnet.defaultSolution": "CarnivalVR.sln",
+    "cSpell.enabled": true
 }
