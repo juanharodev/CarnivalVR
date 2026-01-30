@@ -16,6 +16,7 @@ namespace BehaviourTrees
         [Header("Ice Cream")]
         [SerializeField] GameObject cone;
         [SerializeField] XRGrabInteractable interactable;
+        [SerializeField] Rigidbody rb;
 
         [Header("Vendor Positions")]
         [SerializeField] List<Transform> positions;
@@ -143,6 +144,7 @@ namespace BehaviourTrees
         void EnableGrab()
         {
             interactable.enabled = true;
+            rb.useGravity = true;
         }
     }
 }

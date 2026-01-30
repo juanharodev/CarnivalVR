@@ -3397,6 +3397,45 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "CustomActions",
+            "id": "1666b040-d8f3-472e-8140-9f1b07e8b8a7",
+            "actions": [
+                {
+                    "name": "ToogleMenu",
+                    "type": "Button",
+                    "id": "0a86340b-60e0-4293-885c-bf1f5466b645",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "bbb17413-947f-485a-9ce7-81b097a906ea",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerOpenXR>{LeftHand}/primarybutton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToogleMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cbaa7785-bec5-4618-bb7a-131c64809a8c",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerOpenXR>{RightHand}/primarybutton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToogleMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
