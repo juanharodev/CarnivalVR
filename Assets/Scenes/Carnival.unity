@@ -7522,13 +7522,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699465433}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.089, y: 0.018, z: 0}
+  m_LocalRotation: {x: -0, y: -0.70710677, z: -0, w: 0.7071069}
+  m_LocalPosition: {x: -0.08900071, y: 0.017999947, z: 0.000000007450581}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652163726052}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &715395137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7934,13 +7934,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 731318219}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2675, y: 0.0019, z: 0}
+  m_LocalRotation: {x: -0, y: -0.70710707, z: -0, w: 0.7071066}
+  m_LocalPosition: {x: 0.26749995, y: 0.0019000173, z: -0.000000029802322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652163726052}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &732563018
 GameObject:
   m_ObjectHideFlags: 0
@@ -7999,7 +7999,7 @@ PrefabInstance:
     - target: {fileID: 4297172099559894850, guid: 19d784ad9e4067b4f819a56be59b2d71, type: 3}
       propertyPath: canPrefab
       value: 
-      objectReference: {fileID: 1668067336798123349, guid: 6048a07c72eff784da2d963139cd0f01, type: 3}
+      objectReference: {fileID: 189627568159072250, guid: 6048a07c72eff784da2d963139cd0f01, type: 3}
     - target: {fileID: 4297172099559894850, guid: 19d784ad9e4067b4f819a56be59b2d71, type: 3}
       propertyPath: ballSpawnPoints.Array.size
       value: 3
@@ -25989,6 +25989,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4297172099559894850, guid: 19d784ad9e4067b4f819a56be59b2d71, type: 3}
+      propertyPath: canPrefab
+      value: 
+      objectReference: {fileID: 189627568159072250, guid: 6048a07c72eff784da2d963139cd0f01, type: 3}
     - target: {fileID: 4297172099559894850, guid: 19d784ad9e4067b4f819a56be59b2d71, type: 3}
       propertyPath: 'ballSpawnPoints.Array.data[0]'
       value: 
