@@ -30,8 +30,6 @@ public class ShootignGame : MonoBehaviour
     {
         isPlaying = true;
         isReady = false;
-        ResetGun();
-        gun.gameObject.SetActive(true);
         int round = 1;
         
         while(round <= 3)
