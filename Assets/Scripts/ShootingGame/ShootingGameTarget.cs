@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class DamagableBarrel : MonoBehaviour, IDamagable
+public class ShootingGameTarget : MonoBehaviour, IDamagable
 {
     [SerializeField] float maxHealth;
+    [SerializeField] ShootingGame shootingGame;
     float currentHealth;
 
     void OnEnable()
@@ -14,6 +15,7 @@ public class DamagableBarrel : MonoBehaviour, IDamagable
         currentHealth -= Mathf.Abs(amount);
         if(currentHealth <= 0)
         {
+            shootingGame.HitTarget();
             gameObject.SetActive(false);
         }
     }

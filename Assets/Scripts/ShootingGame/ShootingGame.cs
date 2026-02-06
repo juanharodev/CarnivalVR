@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootignGame : MonoBehaviour
+public class ShootingGame : MonoBehaviour
 {
     [SerializeField] List<Transform> bigTargets;
     [SerializeField] List<Transform> smallTargets;
@@ -12,11 +12,17 @@ public class ShootignGame : MonoBehaviour
     [SerializeField] float waitTime;
     [SerializeField] Rigidbody gun;
     [SerializeField] Transform gunStartPoint;
+    [SerializeField] ShootingGameScoreDisplay currentScoreUI;
+    ShootingGameScore currentScore;
+    [SerializeField] ShootingGameScoreDisplay highScoreUI;
+    ShootingGameScore highScore;
+
 
     void Start()
     {
         ResetGun();
         TurnOffTargets();
+        InitializeScore();
     }
 
 
@@ -31,6 +37,9 @@ public class ShootignGame : MonoBehaviour
         isPlaying = true;
         isReady = false;
         int round = 1;
+        
+        currentScore = new();
+        currentScoreUI.DisplayScore(currentScore);
         
         while(round <= 3)
         {
@@ -67,7 +76,8 @@ public class ShootignGame : MonoBehaviour
             round++;
         }
         isPlaying = false;
-        ResetGun();    
+        ResetGun();
+        SaveScore();    
     }
 
     public void SetReady()
@@ -94,4 +104,52 @@ public class ShootignGame : MonoBehaviour
         gun.linearVelocity = Vector3.zero;
         gun.angularVelocity = Vector3.zero;
     }
+
+    private const string TARGETS =  "shootingTargets";
+    private const string BULLETS =  "highBullets";
+    void InitializeScore()
+    {
+        currentScore = new();        
+        currentScoreUI.DisplayScore(currentScore);
+
+        highScore = new()
+        {
+            targetsHit = PlayerPrefs.GetInt(TARGETS, 0),
+            bulletsUsed = PlayerPrefs.GetInt(BULLETS, 0)
+        };
+
+        highScoreUI.DisplayScore(highScore);
+    }
+
+    void SaveScore()
+    {
+        //Less targets hit
+        if(currentScore.targetsHit < highScore.targetsHit){return;}
+        
+        //Same targets hit, but used more bullets
+        if(currentScore.targetsHit == highScore.targetsHit && highScore.bulletsUsed < currentScore.bulletsUsed){return;}
+
+        //Register high score
+        highScore.targetsHit = currentScore.targetsHit;
+        highScore.bulletsUsed = currentScore.bulletsUsed;
+
+        PlayerPrefs.SetInt(TARGETS,highScore.targetsHit);
+        PlayerPrefs.SetInt(BULLETS,highScore.bulletsUsed);
+
+        highScoreUI.DisplayScore(highScore);
+    }
+
+    public void ShootBullet()
+    {
+        currentScore.bulletsUsed++;
+        currentScoreUI.DisplayScore(currentScore);
+    }
+
+    public void HitTarget()
+    {
+        currentScore.targetsHit++;
+        currentScoreUI.DisplayScore(currentScore);
+    }
 }
+
+

@@ -12,6 +12,7 @@ public class Weapon : MonoBehaviour
     IXRSelectInteractor shootInteractor;
     [SerializeField] SoundPlayer shootSoundPlayer;
     [SerializeField] ParticleSystem collisionParticles;
+    [SerializeField] ShootingGame shootingGame;
     
     public void Shoot(ActivateEventArgs args)
     {
@@ -20,6 +21,7 @@ public class Weapon : MonoBehaviour
     }
     void Shoot(){
         shootSoundPlayer.PlaySound();
+        shootingGame.ShootBullet();
         RaycastHit hit;
         Physics.Raycast(shootStart.position,shootStart.forward, out hit, maxShootSDistance,collitionMask);
         if (hit.collider!= null)

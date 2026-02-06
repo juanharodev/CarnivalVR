@@ -2255,7 +2255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503b7f513694059498d6aa130814ebf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 1
+  shootingGame: {fileID: 1993478539}
 --- !u!1 &59936720
 GameObject:
   m_ObjectHideFlags: 0
@@ -2383,7 +2384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503b7f513694059498d6aa130814ebf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 1
+  shootingGame: {fileID: 1993478539}
 --- !u!1001 &72574476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2630,7 +2632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503b7f513694059498d6aa130814ebf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 1
+  shootingGame: {fileID: 1993478539}
 --- !u!43 &84171497
 Mesh:
   m_ObjectHideFlags: 0
@@ -3693,6 +3696,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: shootingGame
+      value: 
+      objectReference: {fileID: 1993478539}
     - target: {fileID: 3369499503021346754, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
       propertyPath: m_Name
       value: DamagableBarrel (5)
@@ -4410,7 +4421,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503b7f513694059498d6aa130814ebf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 1
+  shootingGame: {fileID: 1993478539}
 --- !u!1 &175318107
 GameObject:
   m_ObjectHideFlags: 0
@@ -6593,6 +6605,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: shootingGame
+      value: 
+      objectReference: {fileID: 1993478539}
     - target: {fileID: 3369499503021346754, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
       propertyPath: m_Name
       value: DamagableBarrel (3)
@@ -7845,7 +7865,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503b7f513694059498d6aa130814ebf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 1
+  shootingGame: {fileID: 1993478539}
 --- !u!1 &376485424
 GameObject:
   m_ObjectHideFlags: 0
@@ -8295,7 +8316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503b7f513694059498d6aa130814ebf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 1
+  shootingGame: {fileID: 1993478539}
 --- !u!1 &410274225
 GameObject:
   m_ObjectHideFlags: 0
@@ -9112,6 +9134,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: shootingGame
+      value: 
+      objectReference: {fileID: 1993478539}
     - target: {fileID: 3369499503021346754, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
       propertyPath: m_Name
       value: DamagableBarrel (4)
@@ -9892,6 +9922,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: shootingGame
+      value: 
+      objectReference: {fileID: 1993478539}
     - target: {fileID: 3369499503021346754, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
       propertyPath: m_Name
       value: DamagableBarrel (2)
@@ -11616,7 +11654,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503b7f513694059498d6aa130814ebf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 1
+  shootingGame: {fileID: 1993478539}
 --- !u!1001 &792477239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14119,6 +14158,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: shootingGame
+      value: 
+      objectReference: {fileID: 1993478539}
     - target: {fileID: 3369499503021346754, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
       propertyPath: m_Name
       value: DamagableBarrel (9)
@@ -21229,6 +21276,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: shootingGame
+      value: 
+      objectReference: {fileID: 1993478539}
     - target: {fileID: 3369499503021346754, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
       propertyPath: m_Name
       value: DamagableBarrel (1)
@@ -21797,6 +21852,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: shootingGame
+      value: 
+      objectReference: {fileID: 1993478539}
     - target: {fileID: 3369499503021346754, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
       propertyPath: m_Name
       value: DamagableBarrel (7)
@@ -21938,7 +22001,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503b7f513694059498d6aa130814ebf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 1
+  shootingGame: {fileID: 1993478539}
 --- !u!1 &1466976055
 GameObject:
   m_ObjectHideFlags: 0
@@ -25368,6 +25432,78 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &1785102188
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1509705585191994498, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_text
+      value: YOU
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.726398
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 25.140806
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710665
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071069
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6684125024887709474, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_Name
+      value: YourScore
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+--- !u!114 &1785102189 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7656638538140787258, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+  m_PrefabInstance: {fileID: 1785102188}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79cd4823d007397488c20f45d12bf105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShootingGameScoreDisplay
 --- !u!1 &1787010092
 GameObject:
   m_ObjectHideFlags: 0
@@ -25948,6 +26084,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: shootingGame
+      value: 
+      objectReference: {fileID: 1993478539}
     - target: {fileID: 3369499503021346754, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
       propertyPath: m_Name
       value: DamagableBarrel (6)
@@ -26412,8 +26556,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 25
-      minScalar: 15
+      scalar: 10
+      minScalar: 5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -26530,7 +26674,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.05
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -26583,7 +26727,7 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.25
+      scalar: 0.15
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -26636,7 +26780,7 @@ ParticleSystem:
     startSizeZ:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.05
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -32559,6 +32703,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: shootingGame
+      value: 
+      objectReference: {fileID: 1993478539}
     - target: {fileID: 3369499503021346754, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
       propertyPath: m_Name
       value: DamagableBarrel (8)
@@ -33332,6 +33484,8 @@ MonoBehaviour:
   waitTime: 7.5
   gun: {fileID: 919132148443381856}
   gunStartPoint: {fileID: 1875386941}
+  currentScoreUI: {fileID: 1785102189}
+  highScoreUI: {fileID: 1612047795318294146}
 --- !u!1001 &1997948366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36202,6 +36356,7 @@ MonoBehaviour:
   damage: 1
   shootSoundPlayer: {fileID: 731318222}
   collisionParticles: {fileID: 1847738323}
+  shootingGame: {fileID: 1993478539}
 --- !u!65 &919132148443381859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36337,6 +36492,78 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190436782455719048}
   m_Mesh: {fileID: -2621062579753826520, guid: 0e590ab6b4fece647a572260d7f15487, type: 3}
+--- !u!1001 &1612047795318294145
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.563
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.531
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49999982
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.86602557
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426369637106514670, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6684125024887709474, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_Name
+      value: BestScore
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735199698805847495, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 441087507}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+--- !u!114 &1612047795318294146 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7656638538140787258, guid: cc25d41a93cca6f42b9453afdefdc53a, type: 3}
+  m_PrefabInstance: {fileID: 1612047795318294145}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79cd4823d007397488c20f45d12bf105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShootingGameScoreDisplay
 --- !u!1 &1683517523707156426
 GameObject:
   m_ObjectHideFlags: 0
@@ -37596,6 +37823,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451123063343518285, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
+      propertyPath: shootingGame
+      value: 
+      objectReference: {fileID: 1993478539}
     - target: {fileID: 3369499503021346754, guid: 3000beca13d34c341bcf2e1f11e49706, type: 3}
       propertyPath: m_Name
       value: DamagableBarrel
@@ -38399,6 +38634,9 @@ SceneRoots:
   - {fileID: 449401801}
   - {fileID: 2049724669}
   - {fileID: 1993478537}
+  - {fileID: 1959388754}
+  - {fileID: 1785102188}
+  - {fileID: 1612047795318294145}
   - {fileID: 77830782}
   - {fileID: 59936724}
   - {fileID: 374461249}
@@ -38428,7 +38666,6 @@ SceneRoots:
   - {fileID: 509314484}
   - {fileID: 1731905364}
   - {fileID: 784286099}
-  - {fileID: 1959388754}
   - {fileID: 1395301025}
   - {fileID: 1771267736}
   - {fileID: 340461357183889427}
