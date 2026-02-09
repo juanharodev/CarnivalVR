@@ -151,6 +151,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3802181277198498110}
+  - {fileID: 2131418717170754633}
   m_Father: {fileID: 3471841922033143499}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &3822196103669612106
@@ -189,6 +190,92 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   root: {fileID: 3471841922033143499}
+--- !u!1001 &1882200606427939746
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5328980823087717166}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.1707
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.1707
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.1707
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.48909664
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.054951
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.21475
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+      propertyPath: m_Name
+      value: Fish
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076138552580877421, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8e617a0e7dbf27c4d86752a2dbb4d602, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+--- !u!4 &2131418717170754633 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 92d7ef30e54c4194e83b5939ff868528, type: 3}
+  m_PrefabInstance: {fileID: 1882200606427939746}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3697093311840116437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -252,6 +339,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a3ce3afefd784af4a88dbebde82ba0f2, type: 3}
       propertyPath: m_Name
       value: FishModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a3ce3afefd784af4a88dbebde82ba0f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a3ce3afefd784af4a88dbebde82ba0f2, type: 3}
       propertyPath: m_TagString
