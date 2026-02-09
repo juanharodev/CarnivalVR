@@ -13,6 +13,8 @@ public class Bow : MonoBehaviour
     [SerializeField] GameObject arrowPrefab;
     [SerializeField] float baseSpeed;
     public bool isUpdatingArrow;
+
+    [SerializeField] BallonGame ballonGame;
     
     int grabCount = 0;
 
@@ -47,6 +49,7 @@ public class Bow : MonoBehaviour
         //Event is called when released. Only activate when one hand released and one still grabs
         grabCount--;
         if (grabCount != 1) return;
+        ballonGame.ShootArrow();
         Vector3 direction = bowGrabPoint.position - bowstringMiddle.position;
         GameObject instance = Instantiate(arrowPrefab,bowstringGrabPoint.position, Quaternion.identity);
         instance.transform.up = bowGrabPoint.forward;

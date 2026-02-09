@@ -77,8 +77,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: da06de62caafe1347a9707c92018350b, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: da06de62caafe1347a9707c92018350b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: da06de62caafe1347a9707c92018350b, type: 3}
+      propertyPath: m_TagString
+      value: Balloon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -125,6 +133,9 @@ MonoBehaviour:
   maxSpeed: 1.5
   soundPlayer: {fileID: 8794099238660710439}
   model: {fileID: 449796971570250722}
+  colorRandomizer: {fileID: 0}
+  balloonCollider: {fileID: 0}
+  ballonGame: {fileID: 0}
 --- !u!114 &8794099238660710439
 MonoBehaviour:
   m_ObjectHideFlags: 0

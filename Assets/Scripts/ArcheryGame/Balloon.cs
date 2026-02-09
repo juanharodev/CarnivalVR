@@ -15,6 +15,7 @@ public class Balloon : MonoBehaviour
     [SerializeField] Collider balloonCollider;
     public GameObject Model => model;
     Coroutine movement;
+    [SerializeField] BallonGame ballonGame;
     
     float speed;
 
@@ -29,7 +30,7 @@ public class Balloon : MonoBehaviour
         initialPosition = transform.position;
     }
 
-    public void Initialize()
+    public void TurnOn()
     {
         if(movement != null){StopCoroutine(movement);}
         colorRandomizer.ChangeColor();
@@ -42,7 +43,9 @@ public class Balloon : MonoBehaviour
 
         xMovement = Random.Range(-1,2);
         yMovement = Random.Range(-1,2);
-
+    }
+    public void Initialize()
+    {
         movement = StartCoroutine(Movement());
     }
 
@@ -68,6 +71,7 @@ public class Balloon : MonoBehaviour
         if(movement != null){StopCoroutine(movement);}
         model.SetActive(false);
         balloonCollider.enabled = false;
+        ballonGame.PopBalloon();
     }
 
     void OnTriggerEnter(Collider other)
