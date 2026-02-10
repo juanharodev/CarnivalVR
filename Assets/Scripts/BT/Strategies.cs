@@ -109,7 +109,6 @@ namespace BehaviourTrees
 
         public Node.status Process()
         {
-            Debug.Log(targetProvider().position);
             Transform target = targetProvider();
 
             entity.position = Vector3.MoveTowards(
