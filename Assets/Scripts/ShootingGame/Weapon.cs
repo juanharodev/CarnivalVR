@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] SoundPlayer shootSoundPlayer;
     [SerializeField] ParticleSystem collisionParticles;
     [SerializeField] ShootingGame shootingGame;
+    [SerializeField] Animator rifleAnimator;
     
     public void Shoot(ActivateEventArgs args)
     {
@@ -21,6 +22,7 @@ public class Weapon : MonoBehaviour
     }
     void Shoot(){
         shootSoundPlayer.PlaySound();
+        rifleAnimator.SetTrigger("Shoot");
         shootingGame.ShootBullet();
         RaycastHit hit;
         Physics.Raycast(shootStart.position,shootStart.forward, out hit, maxShootSDistance,collitionMask);
