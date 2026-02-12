@@ -9,7 +9,7 @@ public class Bow : MonoBehaviour
     [SerializeField] Transform bowstringGrabPoint;
 
     [Header("Arrow")]
-    [SerializeField] GameObject arrow;
+    [SerializeField] GameObject arrowMesh;
     [SerializeField] GameObject arrowPrefab;
     [SerializeField] float baseSpeed;
     public bool isUpdatingArrow;
@@ -20,26 +20,24 @@ public class Bow : MonoBehaviour
 
     void Start()
     {
-        bowstringMiddle = bowstringGrabPoint;
-        UpdateLine();
-        arrow.SetActive(false);
+        arrowMesh.SetActive(false);
     }
 
     void Update()
     {
-        UpdateLine();
-        if (isUpdatingArrow){ UpdateArrow(); }
-        
+        if (isUpdatingArrow){ UpdateArrow(); }  
     }
 
     public void StartShoot(SelectEnterEventArgs args)
     {
         //Event is called when grabbing object, Only activate it when grabbed by two hands
         grabCount++;
+        Debug.Log("Grabbed " + grabCount);
         if(grabCount == 2) 
         {
+            Debug.Log("Start updating");
             isUpdatingArrow = true;
-            arrow.SetActive(true);
+            arrowMesh.SetActive(true);
             bowstringMiddle = args.interactorObject.transform;
         }
     }
@@ -52,31 +50,22 @@ public class Bow : MonoBehaviour
         ballonGame.ShootArrow();
         Vector3 direction = bowGrabPoint.position - bowstringMiddle.position;
         GameObject instance = Instantiate(arrowPrefab,bowstringGrabPoint.position, Quaternion.identity);
-        instance.transform.up = bowGrabPoint.forward;
+        instance.transform.forward = bowGrabPoint.forward;
         Rigidbody arrowRb =  instance.GetComponent<Rigidbody>();
         arrowRb.AddForce(direction * baseSpeed,ForceMode.Impulse);
         arrowRb.useGravity = true;
-        instance.GetComponent<Arrow>().isDestructible = true;
-        bowstringMiddle = bowstringGrabPoint;
-        arrow.SetActive(false);
+        bowstringGrabPoint.position = bowStringStart.position;
+        arrowMesh.SetActive(false);
         isUpdatingArrow = false;
     }
 
     [Header("Bowstring")]
-    public LineRenderer lineRenderer;
-    [SerializeField] Transform bowstringUp;
+    [SerializeField] Transform bowStringStart;
+    
     Transform bowstringMiddle;
-    [SerializeField] Transform bowstringDown;
-
-    void UpdateLine()
-    {
-        lineRenderer.SetPosition(0,bowstringUp.position);
-        lineRenderer.SetPosition(1,bowstringMiddle.position);
-        lineRenderer.SetPosition(2,bowstringDown.position);
-    }
     void UpdateArrow()
     {
-        arrow.transform.position = bowstringMiddle.transform.position;
-        arrow.transform.up =  bowGrabPoint.position - bowstringMiddle.position;
+        bowstringGrabPoint.position = bowstringMiddle.position;
+        arrowMesh.transform.forward =  bowGrabPoint.position - bowstringMiddle.position;
     }
 }
