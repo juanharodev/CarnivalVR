@@ -11,11 +11,7 @@ public class Spawner : MonoBehaviour
     public Transform spawnPrefab;
 
     bool isSpawning = false;
-
-    private void Awake()
-    {
-        StartSpawn();
-    }
+    
     public void StartSpawn()
     {
         if(isSpawning) return;  
