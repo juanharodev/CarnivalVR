@@ -24,6 +24,7 @@ namespace BehaviourTrees
 
         [Header("Gameplay")]
         [SerializeField] int pity = 5;
+        int currentPity;
         [SerializeField] float fakeGiveWindow = 0.35f;
 
         float grabTimer;
@@ -35,6 +36,18 @@ namespace BehaviourTrees
         {
             interactable.enabled = false;
             BuildTree();
+        }
+
+        void OnEnable()
+        {
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            transform.SetPositionAndRotation(positions[0].transform.position,positions[0].transform.rotation);
+            iceCream.canBeAten = false;
+            currentPity = pity;            
+            interactable.enabled = false;
+            rb.useGravity = false;
+            rb.isKinematic = true;
         }
 
         void Update()
@@ -52,7 +65,7 @@ namespace BehaviourTrees
             // CONDITIONS
             Condition playerClose = new Condition(PlayerIsClose);
             Condition playerGrabbedInTime = new Condition(PlayerGrabbedInWindow);
-            Condition outOfPity = new Condition(() => pity <= 0);
+            Condition outOfPity = new Condition(() => currentPity <= 0);
 
             // ACTIONS
             ActionStrategy startFakeGive = new ActionStrategy(StartFakeGive);
@@ -121,7 +134,7 @@ namespace BehaviourTrees
 
         void PullBack()
         {
-            pity--;
+            currentPity--;
             transform.Rotate(180f, 0f, 0f);
         }
 
@@ -141,10 +154,15 @@ namespace BehaviourTrees
             currentIndex = newIndex;
         }
 
+        [SerializeField] IceCreamGameManager manager;
+        [SerializeField] EatIceCream iceCream;
         void EnableGrab()
         {
             interactable.enabled = true;
             rb.useGravity = true;
+            rb.isKinematic = false;
+            manager.StopPlaying();
+            iceCream.canBeAten = true;
         }
     }
 }
