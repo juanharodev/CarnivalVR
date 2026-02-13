@@ -8,7 +8,7 @@ public class ShootingGameScoreDisplay : MonoBehaviour
 
     public void DisplayScore(ShootingGameScore score)
     {
-        lblTargetCount.text = score.targetsHit + "\n--\n" + "15";
+        lblTargetCount.text = score.targetsHit + "\n--\n" + "35";
         lblBulletsCount.text = (score.bulletsUsed <= 99? score.bulletsUsed : 99).ToString();
     }
 }

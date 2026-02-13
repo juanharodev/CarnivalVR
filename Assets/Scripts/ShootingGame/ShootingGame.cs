@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class ShootingGame : MonoBehaviour
 {
-    [SerializeField] List<Transform> bigTargets;
-    [SerializeField] List<Transform> smallTargets;
+    [SerializeField] List<Transform> targets;
     bool isReady;
     bool isPlaying;
     [SerializeField] Animator courtainAnimator;
-    [SerializeField] float waitTime;
     [SerializeField] Rigidbody gun;
     [SerializeField] Transform gunStartPoint;
     [SerializeField] ShootingGameScoreDisplay currentScoreUI;
@@ -45,24 +43,20 @@ public class ShootingGame : MonoBehaviour
         {
             //Turn of all targets
             TurnOffTargets();
-
+            //5t    10t  20t
+            //10s   15s  20s
             //Copy to manipulate non-selected targets
-            List<Transform> smallInactives = new List<Transform>(smallTargets);
-            List<Transform> bigInactives = new List<Transform>(bigTargets);
+            List<Transform> inactiveTargets = new List<Transform>(targets);
+            int totalTargets = round == 3? 20 : round * 5;
             //Activate small targets
-            for (int i = 0; i < round; i++)
+            for (int i = 0; i < totalTargets; i++)
             {
-                int index = Random.Range(0, smallInactives.Count);
-                smallInactives[index].gameObject.SetActive(true);
-                smallInactives.RemoveAt(index);
+                int index = Random.Range(0, inactiveTargets.Count);
+                inactiveTargets[index].gameObject.SetActive(true);
+                inactiveTargets.RemoveAt(index);
             }
-            //Activate big targets
-            for (int i = 0; i < round + 1; i++)
-            {
-                int index = Random.Range(0, bigInactives.Count);
-                bigInactives[index].gameObject.SetActive(true);
-                bigInactives.RemoveAt(index);
-            }
+            
+            float waitTime = 5 + (round * 5);
 
             //Start animation
             courtainAnimator.Play("Open");
@@ -87,11 +81,7 @@ public class ShootingGame : MonoBehaviour
 
     private void TurnOffTargets()
     {
-        foreach (Transform t in smallTargets)
-        {
-            t.gameObject.SetActive(false);
-        }
-        foreach (Transform t in bigTargets)
+        foreach (Transform t in targets)
         {
             t.gameObject.SetActive(false);
         }

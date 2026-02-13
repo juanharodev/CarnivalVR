@@ -4,19 +4,21 @@ public class ShootingGameTarget : MonoBehaviour, IDamagable
 {
     [SerializeField] float maxHealth;
     [SerializeField] ShootingGame shootingGame;
+    [SerializeField] SoundPlayer breakSound;
     float currentHealth;
 
-    void OnEnable()
-    {
-        currentHealth = maxHealth;
-    }
     public void Damage(float amount)
     {
         currentHealth -= Mathf.Abs(amount);
         if(currentHealth <= 0)
         {
             shootingGame.HitTarget();
-            gameObject.SetActive(false);
+            breakSound.PlaySound();
         }
+    }
+
+    void OnEnable()
+    {
+        currentHealth = maxHealth;
     }
 }
